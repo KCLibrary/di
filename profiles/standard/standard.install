@@ -238,7 +238,7 @@ function standard_install() {
   variable_set('node_admin_theme', '1');
   
   $enable = array(
-    'theme_default' => 'library',
+    'theme_default' => 'kclibrary',
   );
   theme_enable($enable);
 

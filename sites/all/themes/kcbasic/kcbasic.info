@@ -1,0 +1,47 @@
+name = KCBasic
+description = HTML5, SASS, Responsive grid base theme.
+screenshot = images/optimized/screenshot.gif
+core = "7.x"
+engine = phptemplate
+
+regions[page_top] = Page top
+regions[header] = Header
+regions[navigation] = Navigation
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = First sidebar
+regions[sidebar_second] = Second sidebar
+regions[footer] = Footer
+regions[page_bottom] = Page bottom
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = search
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+
+; Stylesheets
+stylesheets[all][] = stylesheets/default.css
+stylesheets[all][] = stylesheets/layout.css
+stylesheets[all][] = stylesheets/style.css
+stylesheets[all][] = stylesheets/normalize.css
+stylesheets[print][] = stylesheets/print.css
+
+; Scripts
+scripts[] = js/build/scripts.js
+
+settings[basic_tabs] = 1
+settings[basic_breadcrumb] = 1
+settings[basic_breadcrumb_home] = 1
+settings[basic_breadcrumb_separator] = »
+settings[clear_registry] = 0
+settings[basic_ie_enabled] = 0
+settings[basic_ie_enabled_versions][ie8] = 0
+settings[basic_ie_enabled_versions][ie9] = 0
+settings[basic_ie_enabled_versions][ie10] = 0
+
