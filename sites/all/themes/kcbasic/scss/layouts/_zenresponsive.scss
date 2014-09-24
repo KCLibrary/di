@@ -7,25 +7,16 @@
  *
  * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
  */
-
-$zen-column-count:  16;
-$zen-gutter-width:  20px;
-
-
-// If you need IE6/7 support for box-sizing: border-box (default), see _init.scss
-//$zen-box-sizing: content-box;
-$zen-box-sizing: border-box;
-
-
-// You can generate more efficient CSS if you manually apply the
-// zen-grid-item-base mixin to all grid items from within a single ruleset.
-$zen-auto-include-item-base: true; // this is not functioning.
-// $zen-auto-include-flow-item-base: false;
-
+ 
 /* Include Zen */
 
 @import "zen";              // Add the Zen Grids responsive layout mixins.
 @import "zen/background"; //Add background developent.
+
+$zen-column-count:  16;
+$zen-gutter-width:  40px;
+$zen-box-sizing: border-box;
+
 
 /**
  * Center the page.
@@ -33,14 +24,17 @@ $zen-auto-include-item-base: true; // this is not functioning.
  * For screen sizes larger than 1200px, prevent excessively long lines of text
  * by setting a max-width.
  */
-
+ 
+/* Containers for grid items and flow items. */
+#header,
+#navigation,
 #page,
-.region-bottom {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-  @include zen-grid-background();
-  @include zen-grid-item-base();
+#footer {
+	@include zen-grid-container();
+	/* @include zen-grid-background(); */
+	max-width: 1200px;
+	margin-left: auto;
+  	margin-right: auto;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
@@ -50,16 +44,8 @@ $zen-auto-include-item-base: true; // this is not functioning.
 .sidebar.first,
 .sideavr.second,
 #footer {
-  // See the note about $zen-auto-include-item-base above.
+  // See $zen-auto-include-item-base.
   @include zen-grid-item-base();
-  border:solid 1px #CCC;
-}
-
-/* Containers for grid items and flow items. */
-#header,
-#main,
-#footer {
-  @include zen-grid-container();
 }
 
 
@@ -147,7 +133,7 @@ $zen-auto-include-item-base: true; // this is not functioning.
 @media all and (min-width: 960px) {
 	
 	$zen-column-count:  16;
-	$zen-gutter-width:  10px;
+	$zen-gutter-width:  40px;
 	
   /**
    * The layout when there is only one sidebar, the left one.

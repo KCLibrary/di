@@ -204,11 +204,3 @@ div.status {
   background: #ccff88;
   border-color: #bbee77;
 }
-
-/* line 197, ../scss/style.scss */
-#header, #footer,
-#sidebar-first,
-#sidebar-second,
-#navigation {
-  background: rgba(170, 170, 170, 0.2);
-}

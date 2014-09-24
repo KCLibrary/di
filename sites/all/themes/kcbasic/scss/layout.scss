@@ -2,3 +2,21 @@
 
 /* Layout rules */
 @import "layouts/zenresponsive";
+
+#header-full { background-color:#00F; }
+#navigation-full { background-color:#00C; }
+#page-full { background-color:#FFF; min-height:500px}
+#footer-full { background-color:#00F;}
+#header {background-color:#06F;}
+#navigation {background-color:#06C;}
+#page {background-color:#FFF;}
+#footer {background-color:#06F; padding-bottom:100px}
+
+#header,
+#content,
+#navigation,
+.sidebar.first,
+.sidebar.second,
+#footer {
+	border:solid 1px #000;
+}
