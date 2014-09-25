@@ -23,17 +23,16 @@ $bgcolor1: #fbd1ec;
  * by setting a max-width.
  */
 /* Containers for grid items and flow items. */
-/* line 32, ../scss/layouts/_zenresponsive.scss */
+/* line 29, ../scss/layouts/_zenresponsive.scss */
 #header,
 #navigation,
 #page,
 #footer {
   /* @include zen-grid-background(); */
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 46, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+/* line 45, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
 #navigation:before,
 #navigation:after,
@@ -44,7 +43,7 @@ $bgcolor1: #fbd1ec;
   content: "";
   display: table;
 }
-/* line 50, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
+/* line 50, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/zen-grids-1.4/stylesheets/zen/_grids.scss */
 #header:after,
 #navigation:after,
 #page:after,
@@ -53,7 +52,7 @@ $bgcolor1: #fbd1ec;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-/* line 46, ../scss/layouts/_zenresponsive.scss */
+/* line 40, ../scss/layouts/_zenresponsive.scss */
 #header,
 #content,
 #navigation,
@@ -76,17 +75,17 @@ $bgcolor1: #fbd1ec;
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 62, ../scss/layouts/_zenresponsive.scss */
+  /* line 61, ../scss/layouts/_zenresponsive.scss */
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 64, ../scss/layouts/_zenresponsive.scss */
+  /* line 63, ../scss/layouts/_zenresponsive.scss */
   .sidebar-first #content {
     float: left;
-    width: 66.66667%;
-    margin-left: 33.33333%;
-    margin-right: -100%;
+    width: 12.5%;
+    margin-left: 6.25%;
+    margin-right: -18.75%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -95,12 +94,12 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 69, ../scss/layouts/_zenresponsive.scss */
+  /* line 68, ../scss/layouts/_zenresponsive.scss */
   .sidebar-first .region-sidebar-first {
     float: left;
-    width: 33.33333%;
+    width: 6.25%;
     margin-left: 0%;
-    margin-right: -33.33333%;
+    margin-right: -6.25%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -113,17 +112,17 @@ $bgcolor1: #fbd1ec;
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 77, ../scss/layouts/_zenresponsive.scss */
+  /* line 76, ../scss/layouts/_zenresponsive.scss */
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-  /* line 79, ../scss/layouts/_zenresponsive.scss */
+  /* line 78, ../scss/layouts/_zenresponsive.scss */
   .sidebar-second #content {
     float: left;
-    width: 66.66667%;
+    width: 12.5%;
     margin-left: 0%;
-    margin-right: -66.66667%;
+    margin-right: -12.5%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -132,12 +131,12 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 84, ../scss/layouts/_zenresponsive.scss */
+  /* line 83, ../scss/layouts/_zenresponsive.scss */
   .sidebar-second .region-sidebar-second {
     float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
+    width: 6.25%;
+    margin-left: 12.5%;
+    margin-right: -18.75%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -150,18 +149,18 @@ $bgcolor1: #fbd1ec;
   /**
    * The layout when there are two sidebars.
    */
-  /* line 92, ../scss/layouts/_zenresponsive.scss */
+  /* line 91, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-  /* line 94, ../scss/layouts/_zenresponsive.scss */
+  /* line 93, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars #content {
     float: left;
-    width: 66.66667%;
-    margin-left: 33.33333%;
-    margin-right: -100%;
+    width: 12.5%;
+    margin-left: 6.25%;
+    margin-right: -18.75%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -170,12 +169,12 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 99, ../scss/layouts/_zenresponsive.scss */
+  /* line 98, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars .region-sidebar-first {
     float: left;
-    width: 33.33333%;
+    width: 6.25%;
     margin-left: 0%;
-    margin-right: -33.33333%;
+    margin-right: -6.25%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -184,12 +183,12 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 104, ../scss/layouts/_zenresponsive.scss */
+  /* line 103, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars .region-sidebar-second {
     float: left;
-    width: 100%;
+    width: 18.75%;
     margin-left: 0%;
-    margin-right: -100%;
+    margin-right: -18.75%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -205,7 +204,7 @@ $bgcolor1: #fbd1ec;
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-  /* line 110, ../scss/layouts/_zenresponsive.scss */
+  /* line 109, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars .region-sidebar-second .block {
     padding-left: 20px;
     padding-right: 20px;
@@ -215,12 +214,12 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 114, ../scss/layouts/_zenresponsive.scss */
+  /* line 113, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
-    width: 33.33333%;
+    width: 6.25%;
     margin-left: 0%;
-    margin-right: -33.33333%;
+    margin-right: -6.25%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -230,12 +229,12 @@ $bgcolor1: #fbd1ec;
     word-wrap: break-word;
     clear: left;
   }
-  /* line 119, ../scss/layouts/_zenresponsive.scss */
+  /* line 118, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
-    width: 33.33333%;
-    margin-left: 33.33333%;
-    margin-right: -66.66667%;
+    width: 6.25%;
+    margin-left: 6.25%;
+    margin-right: -12.5%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -244,12 +243,12 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 123, ../scss/layouts/_zenresponsive.scss */
+  /* line 122, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
+    width: 6.25%;
+    margin-left: 12.5%;
+    margin-right: -18.75%;
     padding-left: 20px;
     padding-right: 20px;
     -moz-box-sizing: border-box;
@@ -266,12 +265,12 @@ $bgcolor1: #fbd1ec;
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 141, ../scss/layouts/_zenresponsive.scss */
+  /* line 140, ../scss/layouts/_zenresponsive.scss */
   .sidebar-first {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-  /* line 143, ../scss/layouts/_zenresponsive.scss */
+  /* line 142, ../scss/layouts/_zenresponsive.scss */
   .sidebar-first #content {
     float: left;
     width: 75%;
@@ -285,7 +284,7 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 148, ../scss/layouts/_zenresponsive.scss */
+  /* line 147, ../scss/layouts/_zenresponsive.scss */
   .sidebar-first .sidebar.first {
     float: left;
     width: 25%;
@@ -303,12 +302,12 @@ $bgcolor1: #fbd1ec;
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 156, ../scss/layouts/_zenresponsive.scss */
+  /* line 155, ../scss/layouts/_zenresponsive.scss */
   .sidebar-second {
     /* Span 4 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 158, ../scss/layouts/_zenresponsive.scss */
+  /* line 157, ../scss/layouts/_zenresponsive.scss */
   .sidebar-second #content {
     float: left;
     width: 75%;
@@ -322,7 +321,7 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 163, ../scss/layouts/_zenresponsive.scss */
+  /* line 162, ../scss/layouts/_zenresponsive.scss */
   .sidebar-second .sidebar.second {
     float: left;
     width: 25%;
@@ -340,13 +339,13 @@ $bgcolor1: #fbd1ec;
   /**
    * The layout when there are two sidebars.
    */
-  /* line 171, ../scss/layouts/_zenresponsive.scss */
+  /* line 170, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars {
     /* Span 3 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 1 column, starting in 5th column from left. */
   }
-  /* line 173, ../scss/layouts/_zenresponsive.scss */
+  /* line 172, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars #content {
     float: left;
     width: 50%;
@@ -360,7 +359,7 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 178, ../scss/layouts/_zenresponsive.scss */
+  /* line 177, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars .sidebar.first {
     float: left;
     width: 25%;
@@ -374,7 +373,7 @@ $bgcolor1: #fbd1ec;
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 183, ../scss/layouts/_zenresponsive.scss */
+  /* line 182, ../scss/layouts/_zenresponsive.scss */
   .two-sidebars .sidebar.second {
     float: left;
     width: 25%;
@@ -431,7 +430,7 @@ $bgcolor1: #fbd1ec;
   padding-bottom: 100px;
 }
 
-/* line 20, ../scss/layout.scss */
+/* line 15, ../scss/layout.scss */
 #header,
 #content,
 #navigation,
