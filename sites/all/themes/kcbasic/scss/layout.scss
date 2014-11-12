@@ -1,7 +1,8 @@
 @import "base";
 
 /* Layout rules */
-@import "layouts/zenresponsive";
+@import "layouts/desk";
+@import "layouts/tablet";
 
 #header-full { background-color:#00F; }
 #navigation-full { background-color:#00C; }
@@ -18,5 +19,4 @@
 .sidebar.first,
 .sidebar.second,
 #footer {
-	border:solid 1px #000;
 }

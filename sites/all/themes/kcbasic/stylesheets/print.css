@@ -3,7 +3,7 @@
   background-color: transparent;
 }
 
-/* line 14, ../scss/print.scss */
+/* line 6, ../scss/print.scss */
 .sidebar,
 #navigation,
 #header-region,
@@ -21,7 +21,7 @@
   width: 100%;
 }
 
-/* line 25, ../scss/print.scss */
+/* line 22, ../scss/print.scss */
 #content,
 #content #content-inner,
 .content,
@@ -30,7 +30,7 @@
   width: auto;
 }
 
-/* line 34, ../scss/print.scss */
+/* line 31, ../scss/print.scss */
 a:hover, a:active, a:link, a:visited {
   color: black;
 }

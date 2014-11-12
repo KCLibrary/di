@@ -1,0 +1,25 @@
+@import "base";
+@import "susy";
+
+$susy: (
+  columns: 18,
+  gutters: .75,
+  gutter-position:split,
+  container: 980px,
+   debug: (
+    image: true,
+    color: rgba(#333, .1),
+    output: background,
+    toggle: top right,
+  ),
+    use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+$three_colum: layout( 10 0 fluid float inside);
+
