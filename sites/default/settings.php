@@ -213,7 +213,7 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'raw',
+      'database' => 'di',
       'username' => 'drupal',
       'password' => 'drupal',
       'host' => 'localhost',
