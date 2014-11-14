@@ -7,13 +7,13 @@ $susy: (
   gutter-position:split,
   container: 980px,
    debug: (
-    image: true,
+    image: false,
     color: rgba(#333, .1),
     output: background,
     toggle: top right,
   ),
     use-custom: (
-    background-image: true,
+    background-image: false,
     background-options: false,
     box-sizing: true,
     clearfix: false,
