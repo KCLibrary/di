@@ -3,22 +3,21 @@ body {
   margin: 0;
   font: 16px / 1.5em "Helvetica Neue", helvetica, Arial, sans-serif;
   letter-spacing: 0.03em;
-  background-color: black;
 }
 
-/* line 13, ../scss/style.scss */
+/* line 12, ../scss/style.scss */
 a:link, a:visited {
-  color: blue;
+  color: #337ab4;
   text-decoration: none;
 }
 
-/* line 20, ../scss/style.scss */
+/* line 19, ../scss/style.scss */
 a:hover, a:active {
   color: red;
   text-decoration: underline;
 }
 
-/* line 27, ../scss/style.scss */
+/* line 26, ../scss/style.scss */
 #site-name {
   font-size: 2.2em;
   line-height: 1.3em;
@@ -27,12 +26,12 @@ a:hover, a:active {
   margin: 0;
 }
 
-/* line 35, ../scss/style.scss */
+/* line 34, ../scss/style.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3em;
 }
 
-/* line 39, ../scss/style.scss */
+/* line 38, ../scss/style.scss */
 h1 {
   font-size: 2.2em;
   font-weight: 300;
@@ -40,72 +39,72 @@ h1 {
   margin: 0;
 }
 
-/* line 46, ../scss/style.scss */
+/* line 45, ../scss/style.scss */
 h2 {
   font-size: 1.8em;
   font-weight: 300;
   margin-bottom: 0.75em;
 }
 
-/* line 52, ../scss/style.scss */
+/* line 51, ../scss/style.scss */
 h3 {
   font-size: 1.4em;
   margin-bottom: 1em;
 }
 
-/* line 57, ../scss/style.scss */
+/* line 56, ../scss/style.scss */
 h4 {
   font-size: 1.2em;
   margin-bottom: 0.8em;
 }
 
-/* line 62, ../scss/style.scss */
+/* line 61, ../scss/style.scss */
 h5 {
   font-size: 1.1em;
   font-weight: 600;
   margin-bottom: 0;
 }
 
-/* line 68, ../scss/style.scss */
+/* line 67, ../scss/style.scss */
 h6 {
   font-size: 1em;
   font-weight: bold;
 }
 
-/* line 74, ../scss/style.scss */
+/* line 73, ../scss/style.scss */
 p {
   margin: 0 0 1em 0;
 }
 
-/* line 79, ../scss/style.scss */
+/* line 78, ../scss/style.scss */
 ul, ol {
   margin-left: 0;
   padding-left: 0;
 }
 
-/* line 85, ../scss/style.scss */
+/* line 84, ../scss/style.scss */
 table {
   width: 99%;
 }
 
-/* line 91, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 tr.even td,
 tr.odd td {
   padding: 10px 5px;
 }
 
-/* line 96, ../scss/style.scss */
+/* line 95, ../scss/style.scss */
 tr.odd {
   background-color: white;
 }
 
-/* line 101, ../scss/style.scss */
+/* line 100, ../scss/style.scss */
 pre, code, tt {
   font: 1em "andale mono", "lucida console", monospace;
   line-height: 1.5;
 }
 
-/* line 106, ../scss/style.scss */
+/* line 105, ../scss/style.scss */
 pre {
   background-color: #efefef;
   display: block;
@@ -114,55 +113,55 @@ pre {
   border: 1px solid #aaaaaa;
 }
 
-/* line 115, ../scss/style.scss */
+/* line 114, ../scss/style.scss */
 ul {
   list-style-type: disc;
 }
-/* line 117, ../scss/style.scss */
+/* line 116, ../scss/style.scss */
 ul ul {
   list-style-type: circle;
 }
-/* line 119, ../scss/style.scss */
+/* line 118, ../scss/style.scss */
 ul ul ul {
   list-style-type: square;
 }
-/* line 121, ../scss/style.scss */
+/* line 120, ../scss/style.scss */
 ul ul ul ul {
   list-style-type: circle;
 }
 
-/* line 128, ../scss/style.scss */
+/* line 127, ../scss/style.scss */
 ol {
   list-style-type: decimal;
 }
-/* line 130, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 ol ol {
   list-style-type: lower-alpha;
 }
-/* line 132, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 ol ol ol {
   list-style-type: decimal;
 }
 
-/* line 139, ../scss/style.scss */
+/* line 138, ../scss/style.scss */
 abbr {
   border-bottom: 1px dotted #666666;
   cursor: help;
   white-space: nowrap;
 }
 
-/* line 146, ../scss/style.scss */
+/* line 145, ../scss/style.scss */
 #edit-title {
   font-size: 24px;
   width: 99%;
 }
 
-/* line 151, ../scss/style.scss */
+/* line 150, ../scss/style.scss */
 #system-themes-form img {
   width: 100px;
 }
 
-/* line 155, ../scss/style.scss */
+/* line 154, ../scss/style.scss */
 .form-item .description {
   font-style: italic;
   line-height: 1.2em;
@@ -171,12 +170,12 @@ abbr {
   color: #777777;
 }
 
-/* line 163, ../scss/style.scss */
+/* line 162, ../scss/style.scss */
 #edit-delete {
   color: #cc0000;
 }
 
-/* line 168, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
 div.messages {
   padding: 9px;
   margin: 1em 0;
@@ -185,21 +184,21 @@ div.messages {
   border: 1px solid #aaccee;
 }
 
-/* line 176, ../scss/style.scss */
+/* line 175, ../scss/style.scss */
 div.warning {
   color: #884400;
   background: #ffee66;
   border-color: #eedd55;
 }
 
-/* line 182, ../scss/style.scss */
+/* line 181, ../scss/style.scss */
 div.error {
   color: white;
   background: #ee6633;
   border-color: #dd5522;
 }
 
-/* line 188, ../scss/style.scss */
+/* line 187, ../scss/style.scss */
 div.status {
   color: #336600;
   background: #ccff88;

@@ -4,14 +4,14 @@
 @import "layouts/desk";
 @import "layouts/tablet";
 
-#header-full { background-color:#00F; }
-#navigation-full { background-color:#00C; }
-#page-full { background-color:#CCC;}
-#footer-full { background-color:#00F;}
-#header {background-color:#06F;}
-#navigation {background-color:#06C;}
+#header-full {background-color:#228EA5; position:relative; z-index:10}
+#navigation-full {background-color:#228EA5; position:relative; z-index:10}
+#page-full {background-color:#FFF}
+#header {}
+#navigation {}
 #page {background-color:#FFF; min-height:900px;}
-#footer {background-color:#06F; padding-bottom:100px}
+#footer-full { background-color:#999; position:relative; z-index:10;}
+#footer {background-color:#999; padding-bottom:100px}
 
 #header,
 #content,
@@ -19,4 +19,105 @@
 .sidebar.first,
 .sidebar.second,
 #footer {
+}
+
+#page {
+	-webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.35);
+	-moz-box-shadow: 0px 0px 1px 10px rgba(0,0,0,0.35);
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.35);
+	position:relative;
+	z-index:0;
+}
+
+
+/*********************************** @group MegaMenu */
+
+.megamenu-skin-di {
+	font-size: 80%;
+	padding: 0;
+	display:table !important;
+	width:100%;
+	margin:10px 0;
+	
+	> li {
+		display:table-cell !important;
+		table-layout:fixed !important;
+		width:auto !important;
+		text-align:center;
+	}
+
+	.megamenu-parent h2 {
+		margin: 0;
+	}
+
+	.megamenu-parent h2 a {
+		padding: 5px 10px;
+		margin: 0;
+		color: #FFF;
+		text-transform: uppercase;
+		text-decoration: none;		
+	}
+
+	.megamenu-parent h2 a:hover { /* first parent menu hover state */
+		background: none !important;
+		color:#fff;
+		width:100% !important;
+		text-decoration:underline;
+	}
+
+	.megamenu-bin {
+		border-top:solid 1px #ccc;
+		background-color:#228EA5;
+		line-height: 22px;
+		list-style: none;
+		border-right:solid 1px #ccc;
+		border-left:solid 1px #ccc;
+		/* CSS3 */
+		-webkit-border-radius: 0 0 4px 4px;
+		-moz-border-radius: 0 0 4px 4px;
+		border-radius: 0 0 4px 4px;
+		
+		-moz-box-shadow:    0px 5px 5px -1px  #ccc;
+		-webkit-box-shadow: 0px 5px 5px -1px  #ccc;
+		box-shadow:        0px 5px 5px -1px #ccc;
+		width:130% !important;
+		margin-top:10px !important;
+		text-align:left;
+	}
+
+	li, li ul {
+		margin: 0 !important;
+		padding: 0 !important;
+		width:100%;
+	}
+	.megamenu-items {
+	}
+	
+	.megamenu-slot{
+		width: 100%;
+	}
+	
+	.megamenu-slot:hover, .megamenu-item:hover {
+		background-color:#228EA5;
+	}
+	
+	.megamenu-slot h3 a {
+		color: #fff;
+		font-size:100%;
+		display:block;
+		padding:8px;
+		border-bottom:1px solid #FFF;
+	}
+	
+	.megamenu-slot a {
+		color: #d0ebfe;
+		padding: 2px 4px 0 20px;
+		font-size: 100%;
+	}
+	
+	.hovering h2 a{ /* first parent level menu list hover state*/
+		background-color:#228EA5;
+
+	}
+
 }
