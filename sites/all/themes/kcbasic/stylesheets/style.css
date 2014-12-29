@@ -75,9 +75,8 @@
 /* line 115, ../scss/style.scss */
 body {
   margin: 0;
-  font: 16px / 1.5em "Helvetica Neue", helvetica, Arial, sans-serif;
   letter-spacing: 0.03em;
-  font-family: lato !important;
+  font-family: latoregular !important;
 }
 
 /* line 126, ../scss/style.scss */
