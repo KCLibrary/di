@@ -4,10 +4,10 @@
 @import "layouts/desk";
 @import "layouts/tablet";
 
-#header-full {background-color:#228EA5; position:relative; z-index:10}
-#navigation-full {background-color:#228EA5; position:relative; z-index:10}
+#header-full {background-color:#5DC4BD; position:relative; z-index:10; padding-top:10px;}
+#navigation-full {background-color:#5DC4BD; position:relative; z-index:9}
 #page-full {background-color:#FFF}
-#header {}
+#header { position:relative}
 #navigation {}
 #page {background-color:#FFF; min-height:900px;}
 #footer-full { background-color:#999; position:relative; z-index:10;}
@@ -44,6 +44,9 @@
 		table-layout:fixed !important;
 		width:auto !important;
 		text-align:center;
+		font-family:oswald !important;
+		font-weight:normal !important;
+		font-size:1.2em !important;
 	}
 
 	.megamenu-parent h2 {
@@ -67,7 +70,7 @@
 
 	.megamenu-bin {
 		border-top:solid 1px #ccc;
-		background-color:#228EA5;
+		background-color:#5DC4BD;
 		line-height: 22px;
 		list-style: none;
 		border-right:solid 1px #ccc;
@@ -80,7 +83,7 @@
 		-moz-box-shadow:    0px 5px 5px -1px  #ccc;
 		-webkit-box-shadow: 0px 5px 5px -1px  #ccc;
 		box-shadow:        0px 5px 5px -1px #ccc;
-		width:130% !important;
+		width:150% !important;
 		margin-top:10px !important;
 		text-align:left;
 	}
@@ -98,15 +101,16 @@
 	}
 	
 	.megamenu-slot:hover, .megamenu-item:hover {
-		background-color:#228EA5;
+		background-color:#5DC4BD;
 	}
 	
 	.megamenu-slot h3 a {
 		color: #fff;
-		font-size:100%;
+		font-size:.9em !important;
 		display:block;
 		padding:8px;
 		border-bottom:1px solid #FFF;
+		font-family:latoregular !important;
 	}
 	
 	.megamenu-slot a {
@@ -116,7 +120,7 @@
 	}
 	
 	.hovering h2 a{ /* first parent level menu list hover state*/
-		background-color:#228EA5;
+		background-color:#5DC4BD;
 
 	}
 
