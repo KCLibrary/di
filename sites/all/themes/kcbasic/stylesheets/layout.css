@@ -55,31 +55,30 @@
    */
   /* line 54, ../scss/layouts/_desk.scss */
   .sidebar-first #content {
-    width: 8.73016%;
-    float: left;
+    width: 64.28571%;
+    float: right;
     margin-left: 1.19048%;
     margin-right: 1.19048%;
   }
   /* line 58, ../scss/layouts/_desk.scss */
   .sidebar-first #sidebar-first {
-    width: 25.39683%;
-    float: right;
+    width: 30.95238%;
+    float: left;
     margin-left: 1.19048%;
     margin-right: 1.19048%;
-    border: solid;
   }
 
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 68, ../scss/layouts/_desk.scss */
+  /* line 67, ../scss/layouts/_desk.scss */
   .sidebar-second #content {
     width: 64.28571%;
     float: left;
     margin-left: 1.19048%;
     margin-right: 1.19048%;
   }
-  /* line 72, ../scss/layouts/_desk.scss */
+  /* line 71, ../scss/layouts/_desk.scss */
   .sidebar-second .sidebar.second {
     width: 25.39683%;
     float: right;
@@ -90,21 +89,21 @@
   /**
    * The layout when there are two sidebars.
    */
-  /* line 81, ../scss/layouts/_desk.scss */
+  /* line 80, ../scss/layouts/_desk.scss */
   .two-sidebars #content {
     width: 42.06349%;
     float: left;
     margin-left: 28.96825%;
     margin-right: -100%;
   }
-  /* line 85, ../scss/layouts/_desk.scss */
+  /* line 84, ../scss/layouts/_desk.scss */
   .two-sidebars .sidebar.first {
     width: 25.39683%;
     float: left;
     margin-left: 1.19048%;
     margin-right: 1.19048%;
   }
-  /* line 89, ../scss/layouts/_desk.scss */
+  /* line 88, ../scss/layouts/_desk.scss */
   .two-sidebars .sidebar.second {
     width: 25.39683%;
     float: right;
@@ -141,6 +140,7 @@
 #page {
   background-color: #FFF;
   min-height: 900px;
+  padding-top: 20px;
 }
 
 /* line 13, ../scss/layout.scss */
