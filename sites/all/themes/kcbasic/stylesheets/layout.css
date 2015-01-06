@@ -156,7 +156,7 @@
   padding-bottom: 100px;
 }
 
-/* line 24, ../scss/layout.scss */
+/* line 20, ../scss/layout.scss */
 #page {
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0px 0px 1px 10px rgba(0, 0, 0, 0.35);
@@ -165,8 +165,21 @@
   z-index: 0;
 }
 
+/* line 28, ../scss/layout.scss */
+#footer {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 40px 0;
+}
+/* line 34, ../scss/layout.scss */
+#footer a {
+  color: #FFF;
+}
+
 /*********************************** @group MegaMenu */
-/* line 35, ../scss/layout.scss */
+/* line 42, ../scss/layout.scss */
 .megamenu-skin-di {
   font-size: 80%;
   padding: 0;
@@ -174,7 +187,7 @@
   width: 100%;
   margin: 10px 0;
 }
-/* line 42, ../scss/layout.scss */
+/* line 49, ../scss/layout.scss */
 .megamenu-skin-di > li {
   display: table-cell !important;
   table-layout: fixed !important;
@@ -184,11 +197,11 @@
   font-weight: normal !important;
   font-size: 1.2em !important;
 }
-/* line 52, ../scss/layout.scss */
+/* line 59, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-parent h2 {
   margin: 0;
 }
-/* line 56, ../scss/layout.scss */
+/* line 63, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-parent h2 a {
   padding: 5px 10px;
   margin: 0;
@@ -196,7 +209,7 @@
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 64, ../scss/layout.scss */
+/* line 71, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-parent h2 a:hover {
   /* first parent menu hover state */
   background: none !important;
@@ -204,7 +217,7 @@
   width: 100% !important;
   text-decoration: underline;
 }
-/* line 71, ../scss/layout.scss */
+/* line 78, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-bin {
   border-top: solid 1px #ccc;
   background-color: #5DC4BD;
@@ -223,21 +236,21 @@
   margin-top: 10px !important;
   text-align: left;
 }
-/* line 91, ../scss/layout.scss */
+/* line 98, ../scss/layout.scss */
 .megamenu-skin-di li, .megamenu-skin-di li ul {
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
 }
-/* line 99, ../scss/layout.scss */
+/* line 106, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-slot {
   width: 100%;
 }
-/* line 103, ../scss/layout.scss */
+/* line 110, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-slot:hover, .megamenu-skin-di .megamenu-item:hover {
   background-color: #5DC4BD;
 }
-/* line 107, ../scss/layout.scss */
+/* line 114, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-slot h3 a {
   color: #fff;
   font-size: .9em !important;
@@ -246,13 +259,13 @@
   border-bottom: 1px solid #FFF;
   font-family: latoregular !important;
 }
-/* line 116, ../scss/layout.scss */
+/* line 123, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-slot a {
   color: #d0ebfe;
   padding: 2px 4px 0 20px;
   font-size: 100%;
 }
-/* line 122, ../scss/layout.scss */
+/* line 129, ../scss/layout.scss */
 .megamenu-skin-di .hovering h2 a {
   /* first parent level menu list hover state*/
   background-color: #5DC4BD;

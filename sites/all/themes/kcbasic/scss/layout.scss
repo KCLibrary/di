@@ -13,12 +13,8 @@
 #footer-full { background-color:#999; position:relative; z-index:10;}
 #footer {background-color:#999; padding-bottom:100px}
 
-#header,
-#content,
-#navigation,
-.sidebar.first,
-.sidebar.second,
-#footer {
+#header, #content, #navigation, .sidebar.first, .sidebar.second, #footer {
+
 }
 
 #page {
@@ -27,6 +23,17 @@
 	box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.35);
 	position:relative;
 	z-index:0;
+}
+
+#footer {
+	color:#FFF;
+	text-align:center;
+	font-size:16px;
+	line-height:26px;
+	padding:40px 0;
+	a {
+		color:#FFF;
+	}
 }
 
 
