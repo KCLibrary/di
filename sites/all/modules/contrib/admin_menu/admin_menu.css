@@ -11,7 +11,6 @@
 
 #admin-menu {
   background: #101010 url(images/bkg.png) bottom left repeat-x;
-  font-size: 11px;
   font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
   left: 0;
   position: absolute;
@@ -98,9 +97,7 @@ body.admin-menu {
 }
 #admin-menu .dropdown li li {
   background: #202020;
-  filter: Alpha(opacity=88);
   float: none;
-  opacity: 0.88;
   width: 160px; /* Required for Opera */
 }
 #admin-menu .dropdown li li li {
