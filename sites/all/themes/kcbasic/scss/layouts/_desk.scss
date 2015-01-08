@@ -29,11 +29,22 @@
 #footer {
 }
 
-.no-sidebars {
+
+.not-front.no-sidebars {
 	#content {
 		@include span(isolate 16 at 2);
 	}
 }
+
+.front.no-sidebars {
+	#content {
+	}
+	#page {
+		padding-top:0px;
+	}
+}
+
+
 #header, #navigation {
 	.container {
 	@include span(full);

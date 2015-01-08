@@ -146,6 +146,60 @@
 	}
 }
 
+/********** front ***********/
+#front-top {
+	
+	font-family:oswald, "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+	font-size:1.5em;
+	border-bottom:solid 15px #D6DF23;
+	background-color:#5F5E5D !important;
+	color:#FFF;
+	table-layout:fixed;
+	td {
+	}
+	img {
+		width:100%;
+		display:block;
+	}
+	strong {
+		display:block;
+		margin:0 20%;
+		font-size:1.5em;
+		text-transform:uppercase;
+		line-height:normal;
+	}
+}
+
+.front {
+		#table-copntent {
+		margin-top:40px;
+		position:relative;
+	}
+	.bar {
+		background-color:#5CC4BE;
+		height:35px;
+		position:relative;
+		top:25px;
+		width:100%;
+		z-index:-10;
+	}
+	.front-links {
+		table-layout:fixed;
+		background-color:none;
+		margin:0 10% 0 20% !important;
+		width:80%;
+		td {
+			padding:0px !important;
+			vertical-align:top !important;
+		}
+	}
+	h3 {
+		font-family:oswald, "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+		font-size:1em;
+		color:#FFF;
+	}
+}
+
 
 /*********************************** @group MegaMenu */
 

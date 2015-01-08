@@ -30,15 +30,20 @@
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-/* line 33, ../scss/layouts/_desk.scss */
-.no-sidebars #content {
+/* line 34, ../scss/layouts/_desk.scss */
+.not-front.no-sidebars #content {
   width: 86.50794%;
   float: left;
   margin-left: 6.74603%;
   margin-right: -100%;
 }
 
-/* line 38, ../scss/layouts/_desk.scss */
+/* line 42, ../scss/layouts/_desk.scss */
+.front.no-sidebars #page {
+  padding-top: 0px;
+}
+
+/* line 49, ../scss/layouts/_desk.scss */
 #header .container, #navigation .container {
   width: 97.61905%;
   float: left;
@@ -53,14 +58,14 @@
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 54, ../scss/layouts/_desk.scss */
+  /* line 65, ../scss/layouts/_desk.scss */
   .sidebar-first #content {
     width: 58.73016%;
     float: right;
     margin-left: 1.19048%;
     margin-right: 1.19048%;
   }
-  /* line 58, ../scss/layouts/_desk.scss */
+  /* line 69, ../scss/layouts/_desk.scss */
   .sidebar-first #sidebar-first {
     width: 30.95238%;
     float: left;
@@ -71,14 +76,14 @@
   /**
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 67, ../scss/layouts/_desk.scss */
+  /* line 78, ../scss/layouts/_desk.scss */
   .sidebar-second #content {
     width: 53.1746%;
     float: left;
     margin-left: 6.74603%;
     margin-right: -100%;
   }
-  /* line 71, ../scss/layouts/_desk.scss */
+  /* line 82, ../scss/layouts/_desk.scss */
   .sidebar-second .sidebar.second {
     width: 28.1746%;
     float: left;
@@ -89,21 +94,21 @@
   /**
    * The layout when there are two sidebars.
    */
-  /* line 80, ../scss/layouts/_desk.scss */
+  /* line 91, ../scss/layouts/_desk.scss */
   .two-sidebars #content {
     width: 42.06349%;
     float: left;
     margin-left: 28.96825%;
     margin-right: -100%;
   }
-  /* line 84, ../scss/layouts/_desk.scss */
+  /* line 95, ../scss/layouts/_desk.scss */
   .two-sidebars .sidebar.first {
     width: 25.39683%;
     float: left;
     margin-left: 1.19048%;
     margin-right: 1.19048%;
   }
-  /* line 88, ../scss/layouts/_desk.scss */
+  /* line 99, ../scss/layouts/_desk.scss */
   .two-sidebars .sidebar.second {
     width: 25.39683%;
     float: right;
@@ -291,8 +296,65 @@
   color: #FFF;
 }
 
+/********** front ***********/
+/* line 150, ../scss/layout.scss */
+#front-top {
+  font-family: oswald, "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+  font-size: 1.5em;
+  border-bottom: solid 15px #D6DF23;
+  background-color: #5F5E5D !important;
+  color: #FFF;
+  table-layout: fixed;
+}
+/* line 160, ../scss/layout.scss */
+#front-top img {
+  width: 100%;
+  display: block;
+}
+/* line 164, ../scss/layout.scss */
+#front-top strong {
+  display: block;
+  margin: 0 20%;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  line-height: normal;
+}
+
+/* line 174, ../scss/layout.scss */
+.front #table-copntent {
+  margin-top: 40px;
+  position: relative;
+}
+/* line 178, ../scss/layout.scss */
+.front .bar {
+  background-color: #5CC4BE;
+  height: 35px;
+  position: relative;
+  top: 25px;
+  width: 100%;
+  z-index: -10;
+}
+/* line 186, ../scss/layout.scss */
+.front .front-links {
+  table-layout: fixed;
+  background-color: none;
+  margin: 0 10% 0 20% !important;
+  width: 80%;
+}
+/* line 191, ../scss/layout.scss */
+.front .front-links td {
+  padding: 0px !important;
+  vertical-align: top !important;
+}
+/* line 196, ../scss/layout.scss */
+.front h3 {
+  font-family: oswald, "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+  font-size: 1em;
+  color: #FFF;
+}
+
 /*********************************** @group MegaMenu */
-/* line 152, ../scss/layout.scss */
+/* line 206, ../scss/layout.scss */
 .megamenu-skin-di {
   font-size: 80%;
   padding: 0;
@@ -300,7 +362,7 @@
   width: 100%;
   margin: 10px 0;
 }
-/* line 159, ../scss/layout.scss */
+/* line 213, ../scss/layout.scss */
 .megamenu-skin-di > li {
   display: table-cell !important;
   table-layout: fixed !important;
@@ -310,11 +372,11 @@
   font-weight: normal !important;
   font-size: 1.2em !important;
 }
-/* line 169, ../scss/layout.scss */
+/* line 223, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-parent h2 {
   margin: 0;
 }
-/* line 173, ../scss/layout.scss */
+/* line 227, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-parent h2 a {
   padding: 5px 10px;
   margin: 0;
@@ -322,7 +384,7 @@
   text-transform: uppercase;
   text-decoration: none;
 }
-/* line 181, ../scss/layout.scss */
+/* line 235, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-parent h2 a:hover {
   /* first parent menu hover state */
   background: none !important;
@@ -330,7 +392,7 @@
   width: 100% !important;
   text-decoration: underline;
 }
-/* line 188, ../scss/layout.scss */
+/* line 242, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-bin {
   border-top: solid 1px #ccc;
   background-color: #5DC4BD;
@@ -349,21 +411,21 @@
   margin-top: 10px !important;
   text-align: left;
 }
-/* line 208, ../scss/layout.scss */
+/* line 262, ../scss/layout.scss */
 .megamenu-skin-di li, .megamenu-skin-di li ul {
   margin: 0 !important;
   padding: 0 !important;
   width: 100%;
 }
-/* line 216, ../scss/layout.scss */
+/* line 270, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-slot {
   width: 100%;
 }
-/* line 220, ../scss/layout.scss */
+/* line 274, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-slot:hover, .megamenu-skin-di .megamenu-item:hover {
   background-color: #5DC4BD;
 }
-/* line 224, ../scss/layout.scss */
+/* line 278, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-slot h3 a {
   color: #fff;
   font-size: .9em !important;
@@ -372,13 +434,13 @@
   border-bottom: 1px solid #FFF;
   font-family: latoregular !important;
 }
-/* line 233, ../scss/layout.scss */
+/* line 287, ../scss/layout.scss */
 .megamenu-skin-di .megamenu-slot a {
   color: #d0ebfe;
   padding: 2px 4px 0 20px;
   font-size: 100%;
 }
-/* line 239, ../scss/layout.scss */
+/* line 293, ../scss/layout.scss */
 .megamenu-skin-di .hovering h2 a {
   /* first parent level menu list hover state*/
   background-color: #5DC4BD;

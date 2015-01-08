@@ -122,6 +122,7 @@ body {
   box-sizing:border-box !important;
   color:#5F5E5D;
   line-height:26px !important;
+  box-sizing: border-box !important;
 }
 
 
@@ -207,7 +208,6 @@ ul, ol {
 
 // Table styles.
 table {
-  width: 99%;
 }
 
 tr.even,

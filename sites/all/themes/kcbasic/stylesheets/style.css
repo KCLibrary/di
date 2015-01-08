@@ -81,21 +81,22 @@ body {
   box-sizing: border-box !important;
   color: #5F5E5D;
   line-height: 26px !important;
+  box-sizing: border-box !important;
 }
 
-/* line 130, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 a:link, a:visited {
   color: #337AB4;
   text-decoration: none;
 }
 
-/* line 137, ../scss/style.scss */
+/* line 138, ../scss/style.scss */
 a:hover, a:active {
   color: red;
   text-decoration: underline;
 }
 
-/* line 144, ../scss/style.scss */
+/* line 145, ../scss/style.scss */
 #site-name {
   font-size: 2.2em;
   line-height: 1.3em;
@@ -104,12 +105,12 @@ a:hover, a:active {
   margin: 0;
 }
 
-/* line 152, ../scss/style.scss */
+/* line 153, ../scss/style.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.3em;
 }
 
-/* line 156, ../scss/style.scss */
+/* line 157, ../scss/style.scss */
 h1 {
   font-family: oswald, "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 2.2em;
@@ -122,54 +123,49 @@ h1 {
   color: #5CC4BE;
 }
 
-/* line 168, ../scss/style.scss */
+/* line 169, ../scss/style.scss */
 h2 {
   font-size: 1.8em;
   font-weight: 300;
   margin-bottom: 0.5em;
 }
 
-/* line 174, ../scss/style.scss */
+/* line 175, ../scss/style.scss */
 h3 {
   font-size: 1.4em;
   margin-bottom: .5em;
 }
 
-/* line 179, ../scss/style.scss */
+/* line 180, ../scss/style.scss */
 h4 {
   font-size: 1.2em;
   margin-bottom: 0.5em;
 }
 
-/* line 184, ../scss/style.scss */
+/* line 185, ../scss/style.scss */
 h5 {
   font-size: 1.1em;
   font-weight: 600;
   margin-bottom: 0;
 }
 
-/* line 190, ../scss/style.scss */
+/* line 191, ../scss/style.scss */
 h6 {
   font-size: 1em;
   font-weight: bold;
 }
 
-/* line 196, ../scss/style.scss */
+/* line 197, ../scss/style.scss */
 p {
   margin: 0 0 1em 0;
 }
 
-/* line 201, ../scss/style.scss */
+/* line 202, ../scss/style.scss */
 ul, ol {
   margin-left: 1.1em;
   margin-bottom: 1.1em;
   padding-left: 0;
   list-style-position: outside !important;
-}
-
-/* line 209, ../scss/style.scss */
-table {
-  width: 99%;
 }
 
 /* line 215, ../scss/style.scss */
