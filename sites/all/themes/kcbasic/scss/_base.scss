@@ -7,8 +7,8 @@
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$base-font-size:   15px; // The font size set on the root html element.
-$base-line-height: 22px; // This line-height determines the basic unit of vertical rhythm.
+$base-font-size:   16px; // The font size set on the root html element.
+$base-line-height: 36px; // This line-height determines the basic unit of vertical rhythm.
 $margin: 20px;
 
 $h1-font-size: 1.5  * $base-font-size;
@@ -54,6 +54,8 @@ $indent-amount: 30px;
 
 // The height of the navigation container.
 $nav-height: 3em;
+
+$h1-header: #5CC4BE;
 
 //
 // Partials to be shared with all .scss files.

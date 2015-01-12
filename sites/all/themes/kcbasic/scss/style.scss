@@ -1,3 +1,5 @@
+ @import "susybase";
+
 // Font styles.
 
 @font-face {
@@ -114,18 +116,20 @@
 
 body {
   margin: 0;
-  // Setting up font size, leading and font family
-  //  http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography
-  letter-spacing: 0.03em;
-  font-family:latoregular !important;
+  /* Setting up font size, leading and font family
+   http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography */
+  font-family:latoregular, "Trebuchet MS", Arial, Helvetica, sans-serif !important;
   box-sizing:border-box !important;
+  color:#5F5E5D;
+  line-height:26px !important;
+  box-sizing: border-box !important;
 }
 
 
 // Links
 a {
   &:link, &:visited {
-    color:#337ab4;
+    color:#337AB4;
     text-decoration: none;
   }
 }
@@ -151,10 +155,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.2em;
-  font-weight: 300;
-  margin:0 !important;
-  margin-bottom: 0.5em !important;
+	font-family:oswald, "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 2.2em;
+	font-weight: normal;
+	margin:0 !important;
+	padding-bottom: 0.2em;
+	margin-bottom: 0.6em !important;
+	border-bottom:solid 1px #333;
+	text-transform:uppercase;
+	color:$h1-header;
 }
 
 h2 {
@@ -191,13 +200,14 @@ p {
 
 // List styles.
 ul, ol {
-  margin-left: 0;
+  margin-left: 1.1em;
+  margin-bottom: 1.1em;
   padding-left: 0;
+  list-style-position: outside !important;
 }
 
 // Table styles.
 table {
-  width: 99%;
 }
 
 tr.even,
@@ -313,3 +323,77 @@ input.form-text {
 input.form-submit {
 	width:auto;
 }
+
+/******************* styleguide *******************/
+
+#content, aside {
+	ul {
+		li {
+			list-style-image: url('../images/double_arrow.png') !important;
+		}
+	}
+	.indent {
+		margin-left:3em;
+	}
+	
+	hr {
+		border:0px;
+		height:1px;
+		background:#333;
+		margin:1em 0;
+	}
+	
+	h1 {
+		font-family:oswald, "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 2.1em;
+		font-weight: normal;
+		margin:0 !important;
+		padding-bottom: 0.2em;
+		margin-bottom: 0.6em !important;
+		border-bottom:solid 1px #333;
+		text-transform:uppercase;
+		color:$h1-header;
+	}
+	
+	h2 {
+		font-family:latobold, "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 1.6em;
+		font-weight: 300;
+		margin:0 !important;
+		margin-bottom: 0.6em !important;
+		text-transform:uppercase;
+		color:$h1-header;
+	}
+	.block-title {
+		font-family:oswald, "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+		font-size: 2.1em;
+		border-bottom:solid 1px #333;
+		padding-bottom: 0.2em;
+		margin-bottom: 0.6em !important;
+	}
+	.callout {
+		font-family:oswald, "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 1.2em;
+		font-weight: normal !important;
+		margin:0 !important;
+		padding-bottom: 0.2em;
+		margin-bottom: 0.6em !important;
+		color:$h1-header;
+
+	h2{
+		font-family:oswald, "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+	}
+		
+		hr {
+			border:0px;
+			height:11px;
+			background:#D6DF23;
+			margin:1em 0;
+		}
+	}
+	img {
+		width:100%;
+	}
+}
+
+	

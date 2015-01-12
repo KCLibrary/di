@@ -15,44 +15,57 @@
  */
 function _office_hours_block_process($element, &$form_state, $form) {
   $element['#prefix'] = '';
-  if ($element['#daydelta'] == 0) {
+  $element['#suffix'] = '';
+
+  $blocks_per_day = $element['#field_settings']['cardinality'];
+  $daydelta = $element['#daydelta'];
+
+  if ($daydelta == 0) {
     // This is the first block, show the dayname.
-    $label = t($element['#dayname']);
-    $style = '';
-    $element['#prefix'] .= '<div class="form-item office-hours-block" '. $style . '>';
+    $label = t($element['#dayname'], array(), array('context' => 'day_name') );
+    $label_style = '';
+    $block_style = '';
   }
-  elseif ($element['#field_settings']['cardinality'] == 1) {
-    // This is the second cell and we're not showing it- better clear it (in case a value was entered before).
-    // @todo: not used, since we check cardinality in widget_form. Keep this for later support of 'unlimited' (value -1).
+  elseif ($daydelta >= $blocks_per_day) {
+    // In case the number of blocks per day was lowered by admin, this element
+    // may have a value. Better clear it (in case a value was entered before).
+    // The value will be removed upon the next 'Save' action.
     $label = '';
-    $style = ' style = "display:none;"';
+    $label_style = '';
+    // The following style is only needed if js isn't working.
+    $block_style = 'style = "display:none;"';
 
     $element['#value']['starthours'] = '';
     $element['#value']['endhours'] = '';
-    $element['#prefix'] = "<div class='oh-hide'>";
+    // The following class is the trigger for js to hide the row. 
+    $element['#prefix'] .= "<div class='oh-hide'>";
+    $element['#suffix'] .= '</div>';
   }
-  elseif (isset($element['#value']['starthours'])) {
+  elseif (!empty($element['#value']['starthours'])) {
     // This is a following block with contents, so we show the times.
     $label = t('and');
-    $style = '';
-    $element['#prefix'] .= '<div class="form-item office-hours-block" '. $style . '>';
+    $label_style = 'style = "text-align:right;"';
+    $block_style = '';
   }
   else {
-    // This is an empty following block, so we show the 'add hours link'.
+    // This is an empty following block, so we show the 'add hours' js-link.
     $label = t('and');
-    $style = 'style = "display:none;"';
+    $label_style = 'style = "text-align:right;"';
+    $block_style = 'style = "display:none;"';
 
-    $link = l(t('Add more hours'), '', array('attributes' => array('class' => 'oh-add-more-link')));
+    // Using 'Add more' instead of 'Add more hours' enables automatic translation.
+    $link = l(t('Add more'), '', array('attributes' => array('class' => 'oh-add-more-link')));
     $element['#prefix'] .= $link;
-    $element['#prefix'] .= '<div class="form-item office-hours-block" '. $style . '>';
   }
-  $element['#prefix'] .= '<label>' . $label . '</label>';
-  $element['#prefix'] .= '<div class="office-hours-block-hours">';
+  $element['#prefix'] .= '<div class="form-item office-hours-block" ' . $block_style . '>';
+  $element['#prefix'] .= '<label '. $label_style. '>' . $label . '</label>';
 
-  $element['#suffix'] = '';
-  $element['#suffix'] .= '</div>'; // from-until
-  $element['#suffix'] .= !empty($element['#description']) ? '<div class="description">' . $element['#description'] . '</div>' : '';
-  $element['#suffix'] .= '</div>'; // field_set-wrapper
+  // Show a 'Clear this line' js-link to each element.
+  // Use 'Remove', which has lots of translations.
+  $clear_link = l(t('Remove'), '', array('attributes' => array('class' => 'oh-clear-link')));
+  $element['#suffix'] .= '<div>' . $clear_link . '</div>';
+
+  $element['#suffix'] .= '</div>'; // class="form-item office-hours-block ".
 
   $element['day'] = array(
     '#type' => 'value',
@@ -64,13 +77,15 @@ function _office_hours_block_process($element, &$form_state, $form) {
   );
   $element['starthours'] = array(
     '#type' => 'office_hours_select',
-    '#prefix' => ' ' . t('from'),
+    // Using capitals enables automatic translation. mb_strtolower also converts 'À' to 'à'.
+    '#prefix' => mb_strtolower( t('From', array('context' => 'office_hours')) ),
     '#default_value' => isset($element['#value']['starthours']) ? $element['#value']['starthours'] : NULL ,
     '#field_settings' => $element['#field_settings'],
-  ); 
+  );
   $element['endhours'] = array(
     '#type' => 'office_hours_select',
-    '#prefix' => ' ' . t('until'),
+    // Using capitals enables automatic translation. mb_strtolower also converts 'À' to 'à'.
+    '#prefix' => mb_strtolower( t('To', array('context' => 'office_hours')) ),
     '#default_value' => isset($element['#value']['endhours']) ? $element['#value']['endhours'] : NULL,
     '#field_settings' => $element['#field_settings'],
   );
@@ -79,11 +94,11 @@ function _office_hours_block_process($element, &$form_state, $form) {
 }
 
 /**
- * Widget's value callback for office_hours_select element.
+ * Callback for office_hours_select element.
+ *
  * Takes the #default_value and dissects it in hours, minutes and ampm indicator.
  */
 function _office_hours_select_value_callback($element, $input = FALSE, &$form_state) {
-  // return array('hour' => $hour, 'minute' => $minute, 'ampm' => $ampm);
   return _office_hours_field_widget_time_parse($element['#default_value'], $element['#field_settings']['hoursformat']);
 }
 
@@ -91,6 +106,7 @@ function _office_hours_select_value_callback($element, $input = FALSE, &$form_st
  * Process the office_hours_select element.
  */
 function _office_hours_select_process($element, &$form_state, $form) {
+
   $element['hours'] = array(
     '#type' => 'select',
     '#options' => $element['#field_settings']['#hours'],
@@ -118,29 +134,34 @@ function _office_hours_select_process($element, &$form_state, $form) {
 function _office_hours_select_validate($element, &$form_state) {
   $hours = $element['hours']['#value'];
   $minutes = ($element['minutes']['#value'] == 0) ? '00' : $element['minutes']['#value'];
-  if ($element['#field_settings']['hoursformat'] == 1) { // 12 hrs format
-    if ($element['ampm']['#value'] == 'pm' && $hours < 12) $hours += 12;
-    if ($element['ampm']['#value'] == 'am' && $hours == 12) $hours = '00';
+  if ($element['#field_settings']['hoursformat'] == 1) {
+    // 12 hrs format.
+    if ($element['ampm']['#value'] == 'pm' && $hours < 1200) {
+      $hours += 1200;
+    }
+    if ($element['ampm']['#value'] == 'am' && $hours == 1200) {
+      $hours = '0000';
+    }
   }
 
   if ($hours != '' && $minutes != '') {
-    form_set_value($element, (string)$hours . $minutes, $form_state);
+    form_set_value($element, (string) $hours + $minutes, $form_state);
   }
   else {
     form_set_value($element, '', $form_state);
   }
-  if ($hours < 0 || $hours > 23) {
-    form_error($element, t('Hours should be between 0 and 23.'));
+  if ($hours < 0000 || $hours > 2300) {
+    form_error($element, t('Hours should be between 0 and 23.', array(), array('office_hours')));
   }
   if ($minutes < 0 || $minutes > 59) {
-    form_error($element, t('Minutes should be between 0 and 59.'));
+    form_error($element, t('Minutes should be between 0 and 59.', array(), array('office_hours')));
   }
 }
 
 /**
- * Implements a callback for _office_hours_elements()
- * which defines the 'office_hours_block' (day) and 'office_hours_select' (hour) elements.
+ * Implements a callback for _office_hours_elements().
  *
+ * For 'office_hours_block' (day) and 'office_hours_select' (hour) elements.
  * You can find the value in $element['#value'], but better in $form_state['values'],
  * which is set in _office_hours_select_validate().
  */
@@ -151,28 +172,30 @@ function _office_hours_block_validate($element, &$form_state) {
   $valhrs = $element['#field_settings']['valhrs'];
   $limitstart = $element['#field_settings']['limitstart'];
   $limitend = $element['#field_settings']['limitend'];
-  if (!empty($item['starthours']) xor !empty($item['endhours']) ) {
+  if (!empty($item['starthours']) xor !empty($item['endhours'])) {
     $error_text = 'Both Opening hours and Closing hours must be set.';
   }
-  elseif ( ($valhrs) && ($item['starthours'] > $item['endhours']) ) {
+  elseif ($valhrs && ($item['starthours'] > $item['endhours'])) {
     $error_text = 'Closing hours are earlier than Opening hours.';
   }
   elseif (!empty($limitstart) || !empty($limitend)) {
     $starthours = $item['starthours'];
     $endhours = $item['endhours'];
-    if ( ($starthours && ($limitstart * 100) > $starthours) || ($endhours && ($limitend * 100) < $endhours) ) {
-      $error_text = 'Hours are outside limits ( !start - !end ).'; 
+    if (($starthours && $limitstart > $starthours) || ($endhours && $limitend < $endhours)) {
+      $error_text = 'Hours are outside limits ( !start - !end ).';
     }
   }
 
   if ($error_text) {
-    $weekdays = date_week_days(TRUE);
-    $error_text  = t('!weekday: ' . $error_text,   
-                     array('!weekday' => $element['#dayname'],
-                           '!start' => $limitstart . ':00' ,
-                           '!end' =>$limitend . ':00',
-                    ));
-
+    $error_text = t($element['#dayname'], array(), array('context' => 'day_name') )
+                . ': '
+                . t($error_text,
+                    array(
+                      '!start' => _office_hours_time_to_24hr($limitstart),
+                      '!end' => _office_hours_time_to_24hr($limitend),
+                    ),
+                    array('context' => 'office_hours')
+                  );
     form_error($element, check_plain($error_text));
   }
 }
