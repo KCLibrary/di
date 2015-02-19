@@ -365,7 +365,3 @@ input.form-submit {
   background: #D6DF23;
   margin: 1em 0;
 }
-/* line 394, ../scss/style.scss */
-#content img, aside img {
-  width: 100%;
-}

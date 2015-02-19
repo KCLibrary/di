@@ -30,26 +30,7 @@
 }
 
 
-.not-front.no-sidebars {
-	#content {
-		@include span(isolate 16 at 2);
-	}
-}
 
-.front.no-sidebars {
-	#content {
-	}
-	#page {
-		padding-top:0px;
-	}
-}
-
-
-#header, #navigation {
-	.container {
-	@include span(full);
-	}
-}
 
 
 
@@ -57,6 +38,27 @@
  * Use 18 grid columns for larger screens.
  */
 @media all and (min-width: 960px) {
+	
+	.not-front.no-sidebars {
+		#content {
+			@include span(isolate 16 at 2);
+		}
+	}
+	
+	.front.no-sidebars {
+		#content {
+		}
+		#page {
+			padding-top:0px;
+		}
+	}
+	
+	#header, #navigation {
+		.container {
+		@include span(full);
+		}
+	}
+	
 		
   /**
    * The layout when there is only one sidebar, the left one.
@@ -98,6 +100,71 @@
 
     .sidebar.second {
       @include span(5 last);
+    }
+  }
+}
+
+@media all and (min-width: 100px) and (max-width: 959px) {
+	
+	#header, #navigation {
+		.container {
+		@include span(full);
+		}
+	}
+	
+  .not-front.no-sidebars {
+		#content {
+			@include span(full);
+		}
+	}
+		
+  /**
+   * The layout when there is only one sidebar, the left one.
+   */
+  .sidebar-first {
+    #content {
+		@include span(full);
+
+    }
+
+    #sidebar-first {
+		@include span(full);
+
+    }
+  }
+
+  /**
+   * The layout when there is only one sidebar, the right one.
+   */
+  .sidebar-second {
+    #content {
+		@include span(full);
+
+    }
+
+    .sidebar.second {
+		@include span(full);
+
+    }
+  }
+
+  /**
+   * The layout when there are two sidebars.
+   */
+  .two-sidebars {
+    #content {
+		@include span(full);
+
+    }
+
+    .sidebar.first {
+		@include span(full);
+
+    }
+
+    .sidebar.second {
+		@include span(full);
+
     }
   }
 }
