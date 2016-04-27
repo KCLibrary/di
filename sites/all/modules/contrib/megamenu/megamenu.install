@@ -5,14 +5,14 @@
  */
 
 /**
- * Implementation of hook_uninstall() 
+ * Implements hook_uninstall().
  */
 function megamenu_uninstall() {
   drupal_uninstall_schema('megamenu');
 }
 
 /**
- * Implementation of hook_schema()
+ * Implements hook_schema().
  */
 function megamenu_schema() {
   $schema['megamenu'] = array(
@@ -67,18 +67,18 @@ function megamenu_schema() {
 }
 
 /**
- * Alter the schema to correct the default storage of the enabled state 
+ * Alter the schema to correct the default storage of the enabled state.
  */
 function megamenu_update_7000() {
   $result = '';
   $spec = array(
-        'description' => t('Enabled state of a mega menu: 1 = enabled, 0 = dissabled'),
-        'type' => 'int',
-        'unsigned' => FALSE,
-        'size' => 'tiny',
-        'default' => 0,
-      );
-  
+    'description' => t('Enabled state of a Megamenu: 1 = enabled, 0 = disabled'),
+    'type' => 'int',
+    'unsigned' => FALSE,
+    'size' => 'tiny',
+    'default' => 0,
+  );
+
   $result = db_change_field('megamenu', 'enabled', 'enabled', $spec);
   
   return $result;

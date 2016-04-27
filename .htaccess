@@ -60,7 +60,7 @@ DirectoryIndex index.php index.html index.htm
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
   RewriteRule ^ - [E=protossl]
-  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTPS} on
   RewriteRule ^ - [E=protossl:s]
 
   # Make sure Authorization HTTP header is available to PHP
@@ -140,4 +140,10 @@ DirectoryIndex index.php index.html index.htm
       Header append Vary Accept-Encoding
     </FilesMatch>
   </IfModule>
+</IfModule>
+
+# Add headers to all responses.
+<IfModule mod_headers.c>
+  # Disable content sniffing, since it's an attack vector.
+  Header always set X-Content-Type-Options nosniff
 </IfModule>

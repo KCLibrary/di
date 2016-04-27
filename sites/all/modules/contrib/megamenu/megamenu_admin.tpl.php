@@ -6,7 +6,7 @@
     <tr>
       <th>Menu</th>
       <th>Options</th>
-      <th>Enable Mega Menu Block</th>
+      <th>Enable Megamenu Block</th>
     </tr>
   </thead>
   <tbody>
@@ -24,4 +24,3 @@
 <?php print drupal_render($form['advanced']); ?>
 <div><?php print drupal_render($form['save_configuration']); ?></div>
 <?php print drupal_render_children($form); // Print the closing form elements (ID and hidden validation tags) ?>
-
