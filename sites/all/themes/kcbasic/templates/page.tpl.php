@@ -2,7 +2,6 @@
   <!-- ______________________ HEADER _______________________ -->
 <div id="header-full">
   <header id="header">
-  <div id="bg-logo" style="position:absolute; z-index:15px; right:200px;"><img src="<?php print $base_path.path_to_theme(); ?>/images/di_background_icon.png" width="149" height="125" /></div>
     <div class="container">
       <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">

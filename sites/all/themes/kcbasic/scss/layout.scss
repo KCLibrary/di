@@ -207,7 +207,7 @@
 	font-size: 80%;
 	padding: 0;
 	display:table !important;
-	width:100%;
+	width:auto;
 	margin:10px 0;
 	
 	> li {
@@ -225,7 +225,7 @@
 	}
 
 	.megamenu-parent h2 a {
-		padding: 5px 10px;
+		padding: 5px 20px;
 		margin: 0;
 		color: #FFF;
 		text-transform: uppercase;
@@ -254,7 +254,7 @@
 		-moz-box-shadow:    0px 5px 5px -1px  #ccc;
 		-webkit-box-shadow: 0px 5px 5px -1px  #ccc;
 		box-shadow:        0px 5px 5px -1px #ccc;
-		width:150% !important;
+		width:300px !important;
 		margin-top:10px !important;
 		text-align:left;
 	}

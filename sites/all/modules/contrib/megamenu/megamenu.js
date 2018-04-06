@@ -6,7 +6,7 @@
       var $megamenu = $('.megamenu-menu');
       var timeout = Drupal.settings.megamenu.timeout;
       var sizewait = Drupal.settings.megamenu.sizewait;
-      var hoverwait = Drupal.settings.megamenu.hoverwait;
+      var hoverwait = 0;
       var hovertimer = null;
       var sizetimer = null;
       var closetimer = null;
